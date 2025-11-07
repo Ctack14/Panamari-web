@@ -1,3 +1,20 @@
+//Mobile device check
+function isMobileDevice() {
+    return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+const desktopVideo = document.querySelector('.desktop-video');
+const mobileVideo = document.querySelector('.mobile-video');
+
+if (isMobileDevice()) {
+    desktopVideo.style.display = 'none';
+    mobileVideo.style.display = 'block';
+} else {
+    desktopVideo.style.display = 'block';
+    mobileVideo.style.display = 'none';
+}
+
+// Video modal
 const modal = document.getElementById("video-modal");
 const btn = document.getElementById("listen-button");
 const closeBtn = document.getElementById("close-modal");
@@ -7,7 +24,7 @@ btn.addEventListener("click", () => {
     modal.style.display = 'flex';
     const src = video.src;
     if (!src.includes("&autoplay=1")) {
-        video.src += "&autoplay=1";
+        video.src = video.src.split("&autoplay=1")[0] + "&autoplay=1";
     }
 });
 
@@ -64,3 +81,6 @@ window.addEventListener("click", (event) => {
         galleryModal.style.display = "none";
     }
 });
+
+
+
