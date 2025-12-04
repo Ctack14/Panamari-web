@@ -1,6 +1,7 @@
 /*No css changes were needed for refactoring - Project 4*/
 /* Added toggle button "Make things funky" */
-/* Added media query to adjust tour cards and header for smaller screens */
+/* Added media query to adjust tour cards and header for smaller screens
+    & less vertical spacing between nav items*/
 
 * {
     margin: 0;
@@ -479,6 +480,7 @@ header aside:first-of-type {
     header nav ul{
         flex-direction: row;
         flex-wrap: wrap;
+        gap: 0 20px;
     }
 
     .tour-card {
