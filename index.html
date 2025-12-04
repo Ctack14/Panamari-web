@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panamari</title>
     <link rel="stylesheet" href="styles.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
@@ -9,49 +10,60 @@
 <body>
 
 <!-- NAVIGATION BAR -->
-    <header>
-        <h1 id="title"><a href="#home">Panamari</a></h1>
-        <aside>
-            <nav>
-                <ul>
-                    <li><a href="#music">Music</a></li>
-                    <li><a href="#tour">Tour</a></li>
-                    <li><a href="#merch-modal">Merch</a></li>
-                    <li><a href="#gallery-modal">Gallery</a></li>
-                    <li><a href="#socials">Socials</a></li>
-                </ul>
-            </nav>
-        </aside>
-    </header>
+<header>
+    <h1 id="title"><a href="#home">Panamari</a></h1>
+    <aside>
+        <input type="checkbox" id="toggle-button" class="toggle"/>
+        <label for="toggle-button" class="toggle-label">
 
-    <main>
+            <span class="ball"></span>
+        </label>
+        <span class="toggle-text">Make things funky</span>
+        <span class="toggle-text-off">This is TOO funky!</span>
+    </aside>
+
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#tour">Tour</a></li>
+                <li><a href="#merch-modal">Merch</a></li>
+                <li><a href="#gallery-modal">Gallery</a></li>
+                <li><a href="#socials">Socials</a></li>
+            </ul>
+        </nav>
+    </aside>
+</header>
+
+<main>
     <!-- VIDEO BACKGROUND -->
-        <div class="video-background">
+    <div class="video-background">
+        <video muted autoplay loop playsinline poster="images/background-video-poster.png">
+        <source src="https://github.com/Ctack14/Panamari-web/raw/refs/heads/master/background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 
-            <!--Desktop Video-->
-            <video class="desktop-video" muted autoplay loop playsinline poster="images/background-video-poster.png">
-                <source src="https://github.com/Ctack14/Panamari-web/raw/refs/heads/master/background-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+    </div>
 
-            <!--Mobile Video-->
-            <video class="mobile-video" muted autoplay loop playsinline poster="images/background-video-poster.png">
-                <source src="https://github.com/Ctack14/Panamari-web/raw/refs/heads/master/mobile-background-video.mp4">
-                Your browser does not support the video tag.
-            </video>
-
-        </div>
+    <div class="background-slideshow">
+        <img class="slide" src="images/panamari_at_khruangbin.jpg.jpg">
+        <img class="slide" src="images/dojo_progression.png">
+        <img class="slide" src="images/julian_21st.jpg.jpg">
+        <img class="slide" src="images/Mason_and_a_legend.jpg.jpg">
+        <img class="slide" src="images/julian_caden_poker.jpeg.jpeg">
+        <img class="slide" src="images/new_equipment.jpg.jpg">
+    </div>
 
     <!-- HERO SECTION -->
-        <section id="home" class="hero">
-            <div class="hero-text">
-                <h2>Welcome to Panamari</h2>
-                <p>Your gateway to frequencies beyond comprehension.</p>
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h2>Welcome to Panamari</h2>
+            <p>Your gateway to frequencies beyond comprehension.</p>
 
-                <button id="listen-button">Get a Taste</button>
-            </div>
-            <div class="hero-background"></div>
-        </section>
+            <button id="listen-button">Get a Taste</button>
+        </div>
+        <div class="hero-background"></div>
+    </section>
 
     <!-- VIDEO POPUP (MODAL) -->
     <div id="video-modal" class="modal">
@@ -75,75 +87,75 @@
     </div>
 
     <!-- MUSIC SECTION -->
-        <section id="music" class="music-section">
-            <h2>Go on... give it a listen</h2>
-            <div class="music-content">
-                <div class="album" id="a-la-sala">
-                    <p>Actual Artist: <em>Khruangbin</em></p>
-                    <div class="spotify-player">
-                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/1PeC1ckDJSzYHkwo6JHbP2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-
+    <section id="music" class="music-section">
+        <h2>Go on... give it a listen</h2>
+        <div class="music-content">
+            <div class="album" id="a-la-sala">
+                <p>Actual Artist: <em>Khruangbin</em></p>
+                <div class="spotify-player">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/1PeC1ckDJSzYHkwo6JHbP2?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
-
-                <div class="album" id="not-tight">
-                    <p>Actual Artist: <em>DOMi & JD BECK</em></p>
-                    <div class="spotify-player">
-                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6cXQ0dxd2pWCTFhZ8RIg2j?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                    </div>
-
-                </div>
-
-                <div class="album" id="v">
-                    <p>Actual Artist: <em>Unknown Mortal Orchestra</em></p>
-                    <div class="spotify-player">
-                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/1epwNzmWdqkBQQZpTa8KJD?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                </div>
-
-                </div>
-                <!-- import some item. ex. if it's an album, include album art, title, release date, and a link to listen -->
-
 
             </div>
-        </section>
+
+            <div class="album" id="not-tight">
+                <p>Actual Artist: <em>DOMi & JD BECK</em></p>
+                <div class="spotify-player">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6cXQ0dxd2pWCTFhZ8RIg2j?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+
+            </div>
+
+            <div class="album" id="v">
+                <p>Actual Artist: <em>Unknown Mortal Orchestra</em></p>
+                <div class="spotify-player">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/1epwNzmWdqkBQQZpTa8KJD?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>                </div>
+
+            </div>
+            <!-- import some item. ex. if it's an album, include album art, title, release date, and a link to listen -->
+
+
+        </div>
+    </section>
 
     <!-- TOUR SECTION -->
-        <section id="tour" class="tour-section">
-            <h2>Upcoming Tour Dates</h2>
-            <div class="tour-content">
-                <div class="tour-card">
-                    <p><strong>March 15, 2026</strong></p>
-                    <p>New York, NY</p>
-                    <p>Madison Square Garden</p>
-                    <a href="https://www.ticketmaster.com/" target="_blank">Get Tickets</a>
-                </div>
-
-                <div class="tour-card">
-                    <p><strong>April 2, 2026</strong></p>
-                    <p>Los Angeles, CA</p>
-                    <p>Hollywood Bowl</p>
-                    <a href="https://www.ticketmaster.com/" target="_blank">Get Tickets</a>
-                </div>
-
-                <div class="tour-card">
-                    <p><strong>May 10, 2026</strong></p>
-                    <p>Chicago, IL</p>
-                    <p>Aragon Ballroom</p>
-                    <a href="https://www.ticketmaster.com/" target="_blank">Get Tickets</a>
-                </div>
-
-                <div class="tour-card">
-                    <p><strong>June 5, 2026</strong></p>
-                    <p>Austin, TX</p>
-                    <p>Stubb's BBQ</p>
-                    <a href="https://www.ticketmaster.com/" target="_blank">Get Tickets</a>
-                </div>
-
+    <section id="tour" class="tour-section">
+        <h2>Upcoming Tour Dates</h2>
+        <div class="tour-content">
+            <div class="tour-card">
+                <p><strong>March 15, 2026</strong></p>
+                <p>New York, NY</p>
+                <p>Madison Square Garden</p>
+                <a href="https://www.ticketmaster.com/" target="_blank">Get Tickets</a>
             </div>
-        </section>
+
+            <div class="tour-card">
+                <p><strong>April 2, 2026</strong></p>
+                <p>Los Angeles, CA</p>
+                <p>Hollywood Bowl</p>
+                <a href="https://www.ticketmaster.com/" target="_blank">Get Tickets</a>
+            </div>
+
+            <div class="tour-card">
+                <p><strong>May 10, 2026</strong></p>
+                <p>Chicago, IL</p>
+                <p>Aragon Ballroom</p>
+                <a href="https://www.ticketmaster.com/" target="_blank">Get Tickets</a>
+            </div>
+
+            <div class="tour-card">
+                <p><strong>June 5, 2026</strong></p>
+                <p>Austin, TX</p>
+                <p>Stubb's BBQ</p>
+                <a href="https://www.ticketmaster.com/" target="_blank">Get Tickets</a>
+            </div>
+
+        </div>
+    </section>
 
     <!-- MERCH POPUP (MODAL) -->
     <div id="merch-modal" class="modal">
-        <div class="modal-content merch-content">
+        <div class="merch-content">
             <span id="close-merch-modal">&times;</span>
             <h2>Merch Coming Soon!</h2>
             <p>Stay tuned for exclusive Panamari merchandise. Coming your way soon!</p>
@@ -152,7 +164,7 @@
 
     <!-- GALLERY POPUP (MODAL) -->
     <section id="gallery-modal" class="modal">
-        <div class="modal-content gallery-content">
+        <div class="gallery-content">
             <span id="close-gallery-modal">&times;</span>
             <h2>Panamari Gallery</h2>
 
@@ -187,21 +199,21 @@
             </figure>
         </div>
     </section>
-    </main>
+</main>
 
 <!-- SOCIALS / FOOTER -->
-    <footer id="socials" class="footer">
-        <div class="socials">
-            <a href="https://facebook.com/panamari" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-            <a href="https://twitter.com/panamari" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://instagram.com/calamaris_dojo" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a href="https://youtube.com/panamari" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-            <p><a href="mailto:panamari@mail.com">panamari@mail.com</a></p>
-            <p></p>
-        </div>
-        <p>&copy; 2025 Panamari. All rights reserved.</p>
-    </footer>
+<footer id="socials" class="footer">
+    <div class="socials">
+        <a href="https://facebook.com/panamari" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://twitter.com/panamari" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://instagram.com/calamaris_dojo" target="_blank"><i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+        <a href="https://youtube.com/panamari" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        <p><a href="mailto:panamari@mail.com">panamari@mail.com</a></p>
+        <p></p>
+    </div>
+    <p>&copy; 2025 Panamari. All rights reserved.</p>
+</footer>
 
 
 <script src="script.js"></script>

@@ -1,0 +1,145 @@
+/* Theme: Dark neon
+   Changes made:
+   - Backgrounds switched from video to slideshow
+   - Headers and sections are highlighted with neon colors
+   - Updated button and link colors
+   - Tour cards gradients are neon-themed and angled
+   - Added text shadows for neon glow look
+*/
+
+body {
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+}
+
+header {
+    background-color: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(12px);
+}
+
+nav a {
+    color: #00ffff;
+}
+
+nav a:hover {
+    color: #ff00ff;
+}
+
+#title {
+    color: #ff00ff;
+}
+
+.hero {
+    color: #00ffff;
+}
+
+.video-background {
+    display: none;
+}
+
+.background-slideshow {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.background-slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+
+}
+
+.hero-text h2 {
+    padding: 15px;
+    background-color: rgba(15, 15, 15, 0.65);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.hero-text p {
+    padding: 15px;
+    background-color: rgba(15, 15, 15, 0.65);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.toggle-text {
+    display: none;
+}
+
+.toggle-text-off {
+    display: flex;
+}
+
+.background-slideshow img.active {
+    opacity: 1;
+}
+
+#listen-button {
+    background-color: #00ffff;
+    color: #0d0d0d;
+}
+
+#listen-button:hover {
+    background-color: #ff00ff;
+    color: #ffffff;
+}
+
+.music-section, .tour-section {
+    background-color: rgba(20, 20, 20, 0.85);
+    backdrop-filter: blur(14px);
+}
+
+.tour-card {
+    background: linear-gradient(170deg, rgba(255, 0, 255, 0.56) 0%, #222222 70%);
+    border: 2px solid #00ffff;
+}
+
+.tour-card a {
+    color: #00ffff;
+    border-color: #00ffff;
+}
+
+.tour-card a:hover {
+    background: #00ffff;
+    color: #111111;
+}
+
+.album {
+    background: linear-gradient(180deg, #1a1a1a 0%, #111111 100%);
+    border: 3px solid #ff00ff;
+    color: #ffffff;
+}
+
+#socials a {
+    color: #00ffff;
+}
+
+.gallery-content {
+    background: rgba(10,10,10,0.95);
+    color: #00ffff;
+}
+
+#close-gallery-modal,
+#close-modal,
+#close-merch-modal {
+    color: #00ffff;
+}
+
+#close-gallery-modal:hover,
+#close-modal:hover,
+#close-merch-modal:hover {
+    color: #ff00ff;
+}
+
+h1, h2, h3, .toggle-text-off, nav a, .tour-card a {
+    text-shadow: 0 0 15px #00ffff;
+}

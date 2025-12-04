@@ -1,3 +1,7 @@
+/*No css changes were needed for refactoring - Project 4*/
+/* Added toggle button "Make things funky" */
+/* Added media query to adjust tour cards and header for smaller screens */
+
 * {
     margin: 0;
     padding: 0;
@@ -24,6 +28,9 @@ html, body {
     z-index: -1;
 }
 
+.background-slideshow {
+    display: none;
+}
 
 .video-background video {
 
@@ -36,7 +43,6 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
 }
 
 header {
@@ -259,7 +265,7 @@ nav a:hover {
 #close-modal:hover {
     color: red;
 
-    }
+}
 
 .merch-content {
     display: flex;
@@ -387,4 +393,98 @@ section {
 }
 .album, .tour-card, .gallery-content, .video-modal-body {
     animation: fadeInUp 1s ease forwards;
+}
+
+header aside:first-of-type {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.toggle-text {
+    display: flex;
+}
+
+.toggle-text-off {
+    display: none;
+}
+
+/*Made with help from https://www.youtube.com/watch?v=KK0PTiNv1xE*/
+.toggle {
+    display: none;
+
+}
+
+.toggle-label {
+    background-color: lightgrey;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.toggle:checked + .toggle-label {
+    background-color: #ff4081;
+}
+
+.toggle:checked + .toggle-label .ball {
+    animation: slideOn 0.3s forwards;
+}
+
+.ball {
+    background-color: white;
+    width: 26px;
+    height: 26px;
+    border-radius: 50px;
+    position: absolute;
+    top: 2.3px;
+    left: 2.5px;
+    animation: slideOff 0.3s forwards;
+}
+
+@keyframes slideOn {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(28px);
+    }
+}
+
+@keyframes slideOff {
+    0% {
+        transform: translateX(28px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* Responsive Design -- based on standard tablet width of 767.98px */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+
+    header nav ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .tour-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+
 }
