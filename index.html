@@ -1,10 +1,35 @@
-<!DOCTYPE html>
+<!--
+    Project: Panamari Website
+    Name: Caden Atack
+    Submitted: 12/04/2025
+
+    I declare that the following source code was written by me, or provided
+    by the instructor for this project. I understand that copying source
+    code from any other source, providing source code to another student,
+    or leaving my code on a public web site constitutes cheating.
+    I acknowledge that  If I am found in violation of this policy this may result
+    in a zero grade, a permanent record on file and possibly immediate failure of the class.
+
+    Reflection: This was actually a very enjoyable project. It was the perfect thing to work on in between other more
+    meticulous assignments. I consider myself to be a creative person, so being able to have fun designing the website
+    was a super fun experience. I learned a lot about creating appealing and responsive websites. Hopefully I'll be able
+    to use this website someday (likely with some modifications), and replace the placeholder spotify frames with some
+    of our own! The javascript was definitely the most difficult part for me. Many hours were spent debugging and
+    diving through forms or watching tutorials on youtube. Luckily, I got the website functional, and learned a lot
+    along the way. I'm definitely proud of the website so far, and I'll probably continue adding elements to it in the
+    future!
+-->
+
+
+
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panamari</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/validate.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
 </head>
 <body>
@@ -212,10 +237,103 @@
         <p><a href="mailto:panamari@mail.com">panamari@mail.com</a></p>
         <p></p>
     </div>
+    <br><br>
+    <label for="hidden-form" id="openVisitorForm">Log your visit!</label>
+    <input type="checkbox" id="hidden-form" class="hidden">
+    <br><br>
     <p>&copy; 2025 Panamari. All rights reserved.</p>
+
+    <section id="visitorForm" class="hidden-form">
+        <form id="info-form" novalidate>
+            <h2>Visitor Information</h2>
+            <ul>
+                <li>
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="address">Address</label>
+                    <input type="text"  id="address" name="address" placeholder="eg. 123 State St">
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="city">City</label>
+                    <input type="text"  id="city" name="city" placeholder="Salt Lake City">
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="state">State</label>
+                    <input type="text"  id="state" name="state" placeholder="UT">
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="zip">Zip</label>
+                    <input type="text"  id="zip" name="zip" placeholder="84111">
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="johnwick@email.com">
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" placeholder="123-456-7890">
+                    <div class="errorMsg"></div>
+                </li>
+            </ul>
+            <ul class="visitor-checkboxes">
+                <li>
+                    <h2>How did you find our page?</h2>
+                </li>
+                <li>
+                    <input type="checkbox" id='google' name='find-page' value="google">
+                    <label for="google">Google</label>
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <input type="checkbox" id='friend' name='find-page' value="friend">
+                    <label for="friend">Friend</label>
+                </li>
+                <li>
+                    <input type="checkbox" id='social-media' name='find-page' value="social-media">
+                    <label for="social-media">Social Media</label>
+                </li>
+                <li>
+                    <input type="checkbox" id='other' name='find-page' value="other">
+                    <label for="other">Other</label>
+                </li>
+            </ul>
+            <ul>
+
+                <li>
+                    <label for="comments">Comments</label>
+                </li>
+
+                    <textarea id="comments" name="comments" rows="4" cols="20" placeholder="Add any comments here"></textarea>
+                </li>
+
+                <li>
+                    <button type="submit">Submit</button>
+                </li>
+            </ul>
+        </form>
+        <section id="thankYouMessage" class="hidden-form">
+            <h2>Thank you for visiting Panamari!</h2>
+            <p>We appreciate you taking the time to log your visit. Stay tuned for more updates and exciting content from Panamari!</p>
+        </section>
+    </section>
+
 </footer>
 
 
-<script src="script.js"></script>
+<script defer src="js/validation.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>

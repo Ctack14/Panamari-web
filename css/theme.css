@@ -1,10 +1,7 @@
 /* Theme: Dark neon
-   Changes made:
-   - Backgrounds switched from video to slideshow
-   - Headers and sections are highlighted with neon colors
-   - Updated button and link colors
-   - Tour cards gradients are neon-themed and angled
-   - Added text shadows for neon glow look
+   Changes made (Project 5 updated):
+   - Background change for visitor form to fit theme change.
+   - Other styles applied to form automatically
 */
 
 body {
@@ -101,6 +98,10 @@ nav a:hover {
 .tour-card {
     background: linear-gradient(170deg, rgba(255, 0, 255, 0.56) 0%, #222222 70%);
     border: 2px solid #00ffff;
+}
+
+#visitorForm {
+    background: linear-gradient(150deg, rgba(166, 0, 166, 0.7) 0%, #222222 70%);
 }
 
 .tour-card a {
