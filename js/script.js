@@ -90,7 +90,7 @@ toggleBtn.addEventListener("click", () => {
     if (!themeEnabled) {
         themeLink = document.createElement("link");
         themeLink.rel = "stylesheet";
-        themeLink.href = "theme.css";
+        themeLink.href = "./css/theme.css";
         document.head.appendChild(themeLink);
         themeEnabled = true;
     } else {
@@ -101,4 +101,9 @@ toggleBtn.addEventListener("click", () => {
         }
         themeEnabled = false;
     }
+});
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    initValidation("info-form", "thankYouMessage");
 });

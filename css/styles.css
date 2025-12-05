@@ -446,6 +446,43 @@ header aside:first-of-type {
     animation: slideOff 0.3s forwards;
 }
 
+#openVisitorForm {
+    margin-top: 4rem;
+    padding: 0.5rem 2rem;
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hidden-form {
+    display: none;
+}
+.hidden {
+    display: none;
+}
+
+#hidden-form:checked ~ #visitorForm {
+    display: flex;
+}
+
+#thankYouMessage {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+#thankYouMessage h2 {
+    font-size: 2rem;
+}
+
+#thankYouMessage p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #ff4081;
+    font-weight: 500;
+}
+
 @keyframes slideOn {
     0% {
         transform: translateX(0);
